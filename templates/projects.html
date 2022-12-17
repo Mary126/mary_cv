@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container p-2">
+<div class="container container-xxl p-1">
 {% for category in categories %}
     <div>
         <hr style="border-top: 1px solid;">
@@ -13,17 +13,19 @@
         <hr style="border-top: 1px solid;">
         <div class="row">
         {% for project in category.projects.all %}
-            <div class="col-md-4 mx-1 card">
-                <div class="card-body">
-                    <h3>{{ project.title }}</h3>
-                    <div class="project-image my-3" style="background-image: url('{{project.images.all.0.image.url}}')"></div>
-                    {% if project.file %}
-                        <a class="btn btn-link" href="{{project.file.url}}">Скачать</a>
-                    {% endif %}
-                    {% if project.website_link %}
-                        <a class="btn btn-link" href={{project.website_link}}>Ссылка на сайт</a>
-                    {% endif %}
-                    <button type="button" class="btn btn-primary show-project-btn" data-pk="{{project.pk}}">Подробнее</button>
+            <div class="col-md-4">
+                <div class="card my-1">
+                    <div class="card-body">
+                        <h3>{{ project.title }}</h3>
+                        <div class="project-image my-3" style="background-image: url('{{project.images.all.0.image.url}}')"></div>
+                        {% if project.file %}
+                            <a class="btn btn-link" href="{{project.file.url}}">Скачать</a>
+                        {% endif %}
+                        {% if project.website_link %}
+                            <a class="btn btn-link" href={{project.website_link}}>Ссылка на сайт</a>
+                        {% endif %}
+                        <button type="button" class="btn btn-primary show-project-btn" data-pk="{{project.pk}}">Подробнее</button>
+                    </div>
                 </div>
             </div>
         {% endfor %}

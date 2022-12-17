@@ -2,8 +2,9 @@
     font-size: 20px !important;
 }
 .project-image {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     height: 300px;
 }
 .btn-close {

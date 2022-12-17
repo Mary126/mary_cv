@@ -1,0 +1,34 @@
+.my-image {
+    background-image: url('../images/avatar.JPG');
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+.info-text {
+    font-size: 20px;
+    text-align: start;
+}
+.link {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    color: white;
+    box-shadow: 0px 5px 5px grey;
+}
+.link:hover {
+    color: white;
+}
+.link p {
+    font-size: 20px !important;
+}
+.link-resume {
+    background-color: #d63384;
+}
+.link-projects {
+    background-color: #596CFF;
+}
+.link-contacts {
+    background-color: #fd7e14;
+}

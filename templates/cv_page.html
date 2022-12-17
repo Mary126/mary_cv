@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/cv.css">
+{% endblock %}
+
+{% block content %}
+<div class="container p-5">
+  <h2 class="text-center">Мое резюме</h2>
+  <div class="row">
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <h3>Имя</h3>
+      <p>Юрасовская Мария Алексеевна</p>
+      <h3>Возраст</h3>
+      <p>22 года (род. 2000)</p>
+      <a href="{% url 'pages:contacts' %}" class="btn btn-primary">Мои контакты</a>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <div class="my-image"></div>
+    </div>
+  </div>
+  <div class="my-5">
+    <h3>Образование</h3>
+    <p>Окончила ГБОУ СОШ №1232 с <span class="text-bold">золотой медалью</span></p>
+    <div class="d-flex align-items-center">
+      <p>Окончила курсы <a href="https://informatics.ru/">"Школа Программистов"</a> в течение 4х лет (2015-2019 гг)</p>
+      <button id="show-certificate" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#certificateModal">Показать сертификат</button>
+    </div>
+  </div>
+  <div class="my-5">
+    <h3>Опыт работы</h3>
+    <p>Junior разработчик Flutter Dart (Июль - Сентябрь 2022) <span class="text-bold">Vidicode Inc.</span> </p>
+  </div>
+  <div class="my-5">
+    <h3>Навыки</h3>
+    <ul>
+      <li>Unity</li>
+      <li>Django</li>
+      <li>HTML/CSS и javascript/jQuery</li>
+      <li>Flutter and Dart</li>
+      <li>C#, Python, немного C++ и Go</li>
+      <li>Отлично работаю с компьютером</li>
+      <li>Быстро учусь новому</li>
+    </ul>
+  </div>
+  <div class="my-5">
+    <h3>Языки</h3>
+    <ul>
+      <li>Русский родной</li>
+      <li class="text-bold">Английский С1 Продвинутый</li>
+    </ul>
+  </div>
+</div>
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+            <h5 class="modal-title">Сертификат</h5>
+            <button type="button" id="btn-close"  class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <div class="certificate-image" style="background-image: url('/static/images/certificate.png')"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

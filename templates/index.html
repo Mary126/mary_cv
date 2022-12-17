@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+
+{% block content %}
+<div class="container my-2 mx-auto text-center p-5">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="my-image"></div>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+            <h2 class="">Добро пожаловать!</h2>
+            <p class="text-primary info-text">Я создала данный сайт-резюме о себе с помощью Django. Тут хочу показать свои навыки и проеты.</p>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20%;">
+        <div class="col-md-4 d-flex justify-content-center">
+            <a href="">
+                <div class="link link-resume d-flex justify-content-center align-items-center">
+                    <p>Мое резюме</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <a href="">
+                <div class="link link-projects d-flex justify-content-center align-items-center">
+                    <p>Мои проекты</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <a href="">
+                <div class="link link-contacts d-flex justify-content-center align-items-center">
+                    <p>Контакты</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -16,6 +16,9 @@
             {% if project.github_link %}
                 <a class="btn btn-link" href="{{project.github_link}}">Ссылка на гитхаб</a>
             {% endif %}
+            {% if project.website_link %}
+                <a class="btn btn-link" href="{{project.website_link}}">Ссылка на сайт</a>
+            {% endif %}
             {% if project.file %}
                 <a class="btn btn-link" href="{{project.file.url}}">Скачать</a>
             {% endif %}

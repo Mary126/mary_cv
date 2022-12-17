@@ -26,7 +26,9 @@ class ProjectAdmin(admin.ModelAdmin):
         'title',
         'description',
         'file',
-        'category'
+        'category',
+        'github_link',
+        'website_link',
     )
     inlines = (ImageInline, )
     empty_value_display = 'Отсутствует'

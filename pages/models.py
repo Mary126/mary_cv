@@ -14,6 +14,7 @@ class Project(models.Model):
     description = models.TextField(verbose_name="Описание", blank=True)
     category = models.ForeignKey(Category, verbose_name="Категория", on_delete=models.PROTECT, related_name="projects")
     github_link = models.URLField(verbose_name="Ссылка на гитхаб", blank=True)
+    website_link = models.URLField(verbose_name="Ссылка на сайт", blank=True)
 
 
 class Image(models.Model):
